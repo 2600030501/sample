@@ -1,0 +1,18 @@
+body{
+    background-color:blue;
+}
+label{
+    color:white;
+}
+table{
+    color:cyan;
+}
+th{
+    color:yellow;
+}
+tr{
+    color:red;
+}
+td{
+    font-style:bold;
+}

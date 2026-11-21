@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Student Activity Management Portal: view upcoming events, explore university activities and register for events.">
+<meta name="author" content="Your Name">
+<meta name="theme-color" content="#7a1020">
+<title>Student Activity Management Portal | KL University</title>
+<link rel="stylesheet" href="2 style.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header>
+<h1>Student Activity Management Portal</h1>
+<nav aria-label="Primary navigation">
+<ul>
+<li><a href="#events">Upcoming Events</a></li>
+<li><a href="#activities">Activities</a></li>
+<li><a href="#register">Register</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<div class="layout">
+<main id="main-content">
+<section id="events" aria-labelledby="events-heading">
+<h2 id="events-heading">Upcoming Events</h2>
+<article>
+<h3>Tech Fest 2026</h3>
+<p><time datetime="2026-12-05">5 December 2026</time> &middot; Main Auditorium</p>
+<p>A day of hackathons, talks and project demos.</p>
+</article>
+<article>
+<h3>Annual Sports Meet</h3>
+<p><time datetime="2026-12-12">12 December 2026</time> &middot; University Stadium</p>
+<p>Inter-department athletics and team sports.</p>
+</article>
+</section>
+
+<section id="activities" aria-labelledby="activities-heading">
+<h2 id="activities-heading">University Activities</h2>
+<article>
+<h3>Clubs &amp; Societies</h3>
+<p>Coding, robotics, music, drama and more.</p>
+</article>
+<article>
+<h3>Volunteering</h3>
+<p>Join community service and outreach programs.</p>
+</article>
+</section>
+
+<section id="register" aria-labelledby="register-heading">
+<h2 id="register-heading">Student Registration</h2>
+<form action="#" method="post">
+<fieldset>
+<legend>Personal details</legend>
+<label for="name">Full name (required)</label>
+<input type="text" id="name" name="name" required autocomplete="name">
+
+<label for="studentid">Student ID (required)</label>
+<input type="text" id="studentid" name="studentid" required>
+
+<label for="email">Email address (required)</label>
+<input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-hint">
+<small id="email-hint">Use your university email.</small>
+
+<label for="department">Department</label>
+<select id="department" name="department">
+<option value="">-- Select department --</option>
+<option>Computer Science</option>
+<option>Electronics</option>
+<option>Mechanical</option>
+<option>Civil</option>
+</select>
+</fieldset>
+
+<fieldset>
+<legend>Year of study</legend>
+<input type="radio" id="y1" name="year" value="1"><label class="inline" for="y1">1st</label>
+<input type="radio" id="y2" name="year" value="2"><label class="inline" for="y2">2nd</label>
+<input type="radio" id="y3" name="year" value="3"><label class="inline" for="y3">3rd</label>
+<input type="radio" id="y4" name="year" value="4"><label class="inline" for="y4">4th</label>
+</fieldset>
+
+<fieldset>
+<legend>Events you want to join</legend>
+<input type="checkbox" id="e1" name="events" value="techfest"><label class="inline" for="e1">Tech Fest</label><br>
+<input type="checkbox" id="e2" name="events" value="sports"><label class="inline" for="e2">Sports Meet</label><br>
+<input type="checkbox" id="e3" name="events" value="volunteer"><label class="inline" for="e3">Volunteering</label>
+</fieldset>
+
+<label for="comments">Additional comments</label>
+<textarea id="comments" name="comments" rows="4"></textarea>
+
+<button type="submit">Register</button>
+</form>
+</section>
+</main>
+
+<aside aria-labelledby="notices-heading">
+<h2 id="notices-heading">Notices</h2>
+<ul>
+<li>Registration closes one week before each event.</li>
+<li>Bring your student ID card.</li>
+</ul>
+</aside>
+</div>
+
+<footer id="contact">
+<p>Contact: <a href="mailto:activities@university.edu" style="color:#fff">activities@university.edu</a></p>
+<p>&copy; 2026 KL University Student Activities</p>
+</footer>
+</body>
+</html>

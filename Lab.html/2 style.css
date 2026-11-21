@@ -1,0 +1,341 @@
+/* ==========================================================
+   Student Activity Management Portal – style.css
+   Link in <head>:  <link rel="stylesheet" href="style.css">
+   ========================================================== */
+
+/* ---------- 1. Colour + size variables (change here, updates everywhere) ---------- */
+:root {
+  --ink: #14213d;          /* main text, header background */
+  --paper: #f7f8fb;        /* page background */
+  --card: #ffffff;         /* cards, form background */
+  --line: #d5dbe8;         /* borders */
+  --accent: #fca311;       /* marigold highlight */
+  --accent-dark: #c97f00;
+  --link: #1d4ed8;
+  --muted: #55607a;
+  --radius: 10px;
+  --font: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+}
+
+/* ---------- 2. Reset + base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;  
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+}
+
+p {
+  margin: 0 0 0.75rem;
+  max-width: 65ch;
+}
+
+a {
+  color: var(--link);
+}
+
+
+.skip-link,
+body > a:first-child {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: var(--ink);
+  font-weight: 600;
+  border-radius: 0 0 var(--radius) var(--radius);
+  z-index: 100;
+}
+
+.skip-link:focus,
+body > a:first-child:focus {
+  top: 0;
+}
+
+
+header {
+  background: var(--ink);
+  color: #fff;
+  padding: 2rem 1.5rem 1.25rem;
+  border-bottom: 4px solid var(--accent);
+}
+
+header h1 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  margin: 0;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  padding: 0.5rem 1.5rem;
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+}
+
+nav a {
+  padding: 0.45rem 0.9rem;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background: var(--ink);
+  color: #fff;
+}
+
+/* If your nav links are inside <ul><li>, this keeps them in a row */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ---------- 5. Main layout ---------- */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+main > section {
+  margin-bottom: 2.5rem;
+}
+
+main > section > h2 {
+  font-size: 1.6rem;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--line);
+}
+
+/* ---------- 6. Event + activity cards ---------- */
+article {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--accent);   /* the one bold accent on the page */
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+article h3 {
+  font-size: 1.2rem;
+}
+
+article p:last-child {
+  margin-bottom: 0;
+}
+
+/* date + venue line (works for <time> or <p class="meta">) */
+article time,
+.meta {
+  display: block;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+/* ---------- 7. Registration form ---------- */
+form {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+fieldset {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin: 0;
+  padding: 1rem 1.25rem 1.25rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-weight: 700;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.6rem 0.75rem;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+}
+
+textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+/* helper text like "Use your university email." */
+small,
+.hint {
+  display: block;
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+/* Radio buttons + checkboxes: label and control side by side */
+input[type="radio"],
+input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0 0.4rem 0 0;
+  accent-color: var(--ink);
+  vertical-align: middle;
+}
+
+fieldset label:has(input[type="radio"]),
+fieldset label:has(input[type="checkbox"]) {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1.25rem;
+  font-weight: 500;
+}
+
+/* Focus styles – important for keyboard users */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-color: var(--ink);
+}
+
+/* Show red border only after the user has typed something wrong */
+input:user-invalid,
+select:user-invalid {
+  border-color: #c62828;
+}
+
+/* ---------- 8. Button ---------- */
+button,
+input[type="submit"] {
+  justify-self: start;
+  padding: 0.7rem 1.8rem;
+  font: inherit;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background: var(--accent-dark);
+  color: #fff;
+}
+
+button:active,
+input[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+/* ---------- 9. Notices + footer ---------- */
+aside,
+section#notices,
+.notices {
+  background: #fff7e6;
+  border: 1px solid #f3d9a4;
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+}
+
+footer {
+  background: var(--ink);
+  color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+footer a {
+  color: var(--accent);
+}
+
+/* ---------- 10. Wider screens: form fields in two columns ---------- */
+@media (min-width: 700px) {
+  fieldset:first-of-type {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---------- 11. Phones ---------- */
+@media (max-width: 520px) {
+  header,
+  nav,
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  form {
+    padding: 1rem;
+  }
+}
+
+/* ---------- 12. Respect users who turn off animations ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}
