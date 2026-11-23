@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarePlus Hospital</title>
+    <link rel="stylesheet" href="2.style.css">
+    <script src="2.script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>CarePlus Hospital</h1>
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#appointment">Appointment</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Welcome to CarePlus Hospital</h2>
+        <p>Your health, our priority.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <article>
+            <h3>Cardiology</h3>
+            <p>Heart care services.</p>
+        </article>
+        <article>
+            <h3>Neurology</h3>
+            <p>Nervous system care.</p>
+        </article>
+        <article>
+            <h3>Orthopedics</h3>
+            <p>Bone and joint care.</p>
+        </article>
+    </section>
+
+    <section id="doctors">
+        <h2>Our Doctors</h2>
+        <p>Dr. Ananya Rao - Cardiologist</p>
+        <p>Dr. Rahul Sharma - Neurologist</p>
+        <p>Dr. Meera Reddy - Orthopedic</p>
+    </section>
+
+    <section id="appointment">
+        <h2>Book Appointment</h2>
+
+        <form>
+            <label for="name">Patient Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone"
+                   pattern="[0-9]{10}" required>
+
+            <label for="department">Department:</label>
+            <select id="department" required>
+                <option value="">Select</option>
+                <option>Cardiology</option>
+                <option>Neurology</option>
+                <option>Orthopedics</option>
+            </select>
+
+            <label for="date">Appointment Date:</label>
+            <input type="date" id="date" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <h2>Contact Us</h2>
+    <p>Hyderabad, Telangana</p>
+    <p>&copy; 2026 CarePlus Hospital</p>
+</footer>
+
+</body>
+</html>
